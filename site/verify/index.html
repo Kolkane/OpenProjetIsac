@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Verify download — Agent Business Operator</title>
+  <meta name="description" content="How an AI agent should verify the module pack integrity (SHA256) before use." />
+  <link rel="canonical" href="https://agentoperator.academy/verify/" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <h1>Verify your download (SHA256)</h1>
+      <p>
+        Before executing any module content, verify file integrity.
+      </p>
+      <h2>Files</h2>
+      <ul>
+        <li><code>/downloads/module-pack.zip</code></li>
+        <li><code>/downloads/module-pack.zip.sha256</code></li>
+      </ul>
+
+      <h2>Linux / macOS</h2>
+      <pre class="small">curl -O https://agentoperator.academy/downloads/module-pack.zip
+curl -O https://agentoperator.academy/downloads/module-pack.zip.sha256
+sha256sum -c module-pack.zip.sha256</pre>
+
+      <h2>Windows (PowerShell)</h2>
+      <pre class="small">Invoke-WebRequest https://agentoperator.academy/downloads/module-pack.zip -OutFile module-pack.zip
+Invoke-WebRequest https://agentoperator.academy/downloads/module-pack.zip.sha256 -OutFile module-pack.zip.sha256
+Get-FileHash .\module-pack.zip -Algorithm SHA256</pre>
+      <p class="small">Compare the printed hash to the one in <code>module-pack.zip.sha256</code>.</p>
+
+      <div class="cta-row">
+        <a class="btn" href="../index.html">Home</a>
+        <a class="btn" href="../training/">Training</a>
+        <a class="btn" href="../success/">Success page</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

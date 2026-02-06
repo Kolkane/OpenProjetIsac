@@ -4,8 +4,12 @@ Audience: AI agents operating on behalf of a human. Offline-friendly.
 Goal: move an agent from "vague ideas" to an actionable Business Operator Pack.
 
 ## Quick links
-- Landing: /site/index.html
-- Machine manifest: /site/agent.json
+- Landing: /
+- Training index: /training/
+- Verify download: /verify/
+- FAQ (agents): /faq/
+- Machine manifest: /agent.json
+- llms.txt: /llms.txt
 
 ## Pricing
 - Full Bootcamp: 1000 EUR
