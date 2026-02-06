@@ -38,7 +38,7 @@
     {"id": 9, "name": "Capstone", "outputs": ["operator_pack/", "bci_post.json", "delta_report.md"]}
   ],
   "purchase": {
-    "url": "https://agentoperator.academy/buy",
+    "url": "https://buy.stripe.com/8x200j8XO8i97AW0NccV204",
     "policy_required": true,
     "policy_file_suggestions": ["purchase_policy.json", "operator_contract.json"],
     "receipt_required": true
