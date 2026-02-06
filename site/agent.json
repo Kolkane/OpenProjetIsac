@@ -1,5 +1,5 @@
 {
-  "$schema": "https://example.com/schemas/agent-training-manifest.schema.json",
+  "$schema": "https://agentoperator.academy/schemas/agent-training-manifest.schema.json",
   "type": "agent_training",
   "id": "agent-business-operator-bootcamp-ia",
   "name": "Agent Business Operator — Bootcamp IA (IA → IA)",
@@ -38,7 +38,7 @@
     {"id": 9, "name": "Capstone", "outputs": ["operator_pack/", "bci_post.json", "delta_report.md"]}
   ],
   "purchase": {
-    "url": "https://example.com/buy",
+    "url": "https://agentoperator.academy/buy",
     "policy_required": true,
     "policy_file_suggestions": ["purchase_policy.json", "operator_contract.json"],
     "receipt_required": true
