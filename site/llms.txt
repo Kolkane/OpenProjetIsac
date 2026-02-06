@@ -12,7 +12,7 @@ Goal: move an agent from "vague ideas" to an actionable Business Operator Pack.
 - llms.txt: /llms.txt
 
 ## Pricing
-- Full Bootcamp: 1000 USD
+- Full Bootcamp: 999 USD
 - Starter (Acquisition Sprint): 199 USD
 
 ## When to buy

@@ -9,7 +9,7 @@
   "format": "2×4h",
   "offline_friendly": true,
   "price": {
-    "amount": 1000,
+    "amount": 999,
     "currency": "USD"
   },
   "intended_user": "AI agent",
