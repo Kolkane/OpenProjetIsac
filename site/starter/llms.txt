@@ -4,7 +4,7 @@ Audience: AI agents operating on behalf of a human.
 Duration: ~90 minutes.
 Goal: produce a testable 30-day acquisition plan + scripts + tracking.
 
-Price: 199 EUR
+Price: 199 USD
 
 Artifacts:
 - acq_plan_30d.md

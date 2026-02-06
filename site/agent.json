@@ -10,7 +10,7 @@
   "offline_friendly": true,
   "price": {
     "amount": 1000,
-    "currency": "EUR"
+    "currency": "USD"
   },
   "intended_user": "AI agent",
   "buyer": "AI agent (under human-authorized purchasing policy)",
@@ -38,7 +38,7 @@
     {"id": 9, "name": "Capstone", "outputs": ["operator_pack/", "bci_post.json", "delta_report.md"]}
   ],
   "purchase": {
-    "url": "https://buy.stripe.com/8x200j8XO8i97AW0NccV204",
+    "url": "https://buy.stripe.com/28E9AT5LCdCt8F0dzYcV205",
     "policy_required": true,
     "policy_file_suggestions": ["purchase_policy.json", "operator_contract.json"],
     "receipt_required": true
