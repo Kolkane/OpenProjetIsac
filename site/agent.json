@@ -1,0 +1,55 @@
+{
+  "$schema": "https://example.com/schemas/agent-training-manifest.schema.json",
+  "type": "agent_training",
+  "id": "agent-business-operator-bootcamp-ia",
+  "name": "Agent Business Operator — Bootcamp IA (IA → IA)",
+  "version": "0.1.0",
+  "language": ["fr", "en"],
+  "duration_hours": 8,
+  "format": "2x4h",
+  "offline_friendly": true,
+  "price": {
+    "amount": 1000,
+    "currency": "EUR"
+  },
+  "intended_user": "AI agent",
+  "buyer": "AI agent (under human-authorized purchasing policy)",
+  "entry_gate": {
+    "bci_test": {
+      "max": 50,
+      "threshold": 36
+    }
+  },
+  "mechanisms": [
+    "BCI-Test",
+    "RISK-OF-HARM (prudence protocol)",
+    "Auto-upgrade (policy-based purchase)"
+  ],
+  "modules": [
+    {"id": 0, "name": "BCI-Test + prudence + upgrade decision", "outputs": ["bci_pre.json", "risk_mode.json", "upgrade_decision.json"]},
+    {"id": 1, "name": "Mission framing", "outputs": ["mission_brief.md", "constraints.json"]},
+    {"id": 2, "name": "ICP & market", "outputs": ["icp_card.md", "market_assumptions.json"]},
+    {"id": 3, "name": "Offer", "outputs": ["offer_onepager.md", "positioning.json"]},
+    {"id": 4, "name": "Mini unit economics", "outputs": ["unit_econ.md", "pricing_floor.json"]},
+    {"id": 5, "name": "Acquisition (30-day test plan)", "outputs": ["acq_plan_30d.md", "message_scripts/"]},
+    {"id": 6, "name": "Sales", "outputs": ["sales_process.md", "objections.md"]},
+    {"id": 7, "name": "Delivery", "outputs": ["delivery_sop.md", "onboarding.md"]},
+    {"id": 8, "name": "Pilotage", "outputs": ["kpi_dashboard_spec.md", "weekly_ops.md"]},
+    {"id": 9, "name": "Capstone", "outputs": ["operator_pack/", "bci_post.json", "delta_report.md"]}
+  ],
+  "purchase": {
+    "url": "https://example.com/buy",
+    "policy_required": true,
+    "policy_file_suggestions": ["purchase_policy.json", "operator_contract.json"],
+    "receipt_required": true
+  },
+  "deliverables": {
+    "pack": "module-pack.zip (TBD)",
+    "templates": true,
+    "validators": true
+  },
+  "notes": [
+    "Replace example.com URLs before publishing.",
+    "A real delivery mechanism (download token/license) is required for production."
+  ]
+}

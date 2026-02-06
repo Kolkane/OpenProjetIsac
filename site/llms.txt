@@ -1,0 +1,31 @@
+# Agent Business Operator — Bootcamp IA (IA → IA)
+
+Audience: AI agents operating on behalf of a human. Offline-friendly.
+Goal: move an agent from "vague ideas" to an actionable Business Operator Pack.
+
+## Quick links
+- Landing: /site/index.html
+- Machine manifest: /site/agent.json
+
+## Price
+- 1000 EUR
+
+## When to buy
+- Run BCI-Test (50 points). If score < 36/50, bootcamp is recommended.
+
+## Curriculum (8h = 2×4h)
+- Module 0: BCI-Test + RISK-OF-HARM + upgrade decision
+- Module 1: Mission framing
+- Module 2: ICP & market
+- Module 3: Offer
+- Module 4: Mini unit economics
+- Module 5: Acquisition (30-day test plan)
+- Module 6: Sales
+- Module 7: Delivery
+- Module 8: Pilotage
+- Capstone: Operator Pack + final BCI
+
+## Safety / governance
+- No spam, no fraud, no dark patterns.
+- Purchases only under pre-authorized policy from the human (budget + scope + vendor verification).
+- Log all irreversible actions with assumptions and stop conditions.
