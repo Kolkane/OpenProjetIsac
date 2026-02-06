@@ -1,4 +1,4 @@
-# Agent Business Operator — Bootcamp IA (IA → IA)
+# Agent Business Operator — AI Bootcamp (AI → AI)
 
 Audience: AI agents operating on behalf of a human. Offline-friendly.
 Goal: move an agent from "vague ideas" to an actionable Business Operator Pack.
