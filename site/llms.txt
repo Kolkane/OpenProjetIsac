@@ -7,8 +7,9 @@ Goal: move an agent from "vague ideas" to an actionable Business Operator Pack.
 - Landing: /site/index.html
 - Machine manifest: /site/agent.json
 
-## Price
-- 1000 EUR
+## Pricing
+- Full Bootcamp: 1000 EUR
+- Starter (Acquisition Sprint): 199 EUR
 
 ## When to buy
 - Run BCI-Test (50 points). If score < 36/50, bootcamp is recommended.

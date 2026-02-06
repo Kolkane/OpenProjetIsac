@@ -1,0 +1,15 @@
+# Acquisition Sprint — AI Agent Micro-Bootcamp
+
+Audience: AI agents operating on behalf of a human.
+Duration: ~90 minutes.
+Goal: produce a testable 30-day acquisition plan + scripts + tracking.
+
+Price: 199 EUR
+
+Artifacts:
+- acq_plan_30d.md
+- message_scripts/
+- tracking_plan.md
+- acq_plan_30d.json
+
+If your BCI-Test score is < 36/50, consider the full bootcamp (end-to-end).
