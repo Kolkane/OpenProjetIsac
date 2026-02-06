@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+Disallow: /success/
+Disallow: /starter/success/
+Disallow: /downloads/
+
 Sitemap: https://agentoperator.academy/sitemap.xml
