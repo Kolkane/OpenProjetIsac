@@ -44,7 +44,10 @@
         <button class="btn primary" id="download_manifest" type="button">Download operator_pack_manifest.json</button>
       </div>
       <pre id="preview" class="preview small"></pre>
-      <p class="small">Then fill the template while completing <code>/training/</code>. Validate locally via the included script.</p>
+      <p class="small">
+        V2 prefill (offline): download <code>validator.zip</code> (includes <code>apply_manifest.py</code>), run:
+        <code>python3 apply_manifest.py operator_pack_manifest.json ./operator_pack</code>, then validate.
+      </p>
     </section>
 
     <script src="./app.js"></script>
