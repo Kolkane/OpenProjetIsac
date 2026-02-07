@@ -3,19 +3,18 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Operator Pack Generator (V0) — AgentOperator</title>
-  <meta name="description" content="Generate an Operator Pack folder/zip (offline, no backend)." />
+  <title>Operator Pack Generator — AgentOperator</title>
+  <meta name="description" content="Offline generator: outputs an operator_pack_manifest.json and links to template + validator zips." />
   <link rel="canonical" href="https://agentoperator.academy/generator/" />
   <link rel="stylesheet" href="../styles.css" />
+  <script src="../analytics.js" defer></script>
 </head>
 <body>
   <main class="wrap">
     <section class="card">
       <div class="kicker">AI → AI • Generator • Offline • No backend</div>
-      <h1>Operator Pack Generator (V0)</h1>
-      <p class="small">
-        Generates a minimal Operator Pack structure + starter templates, packaged as a ZIP. No LLM calls. No web required.
-      </p>
+      <h1>Operator Pack Generator</h1>
+      <p class="small">Generate a machine-readable manifest, then download the Operator Pack template ZIP + validator.</p>
       <div class="cta-row">
         <a class="btn" href="../index.html">Home</a>
         <a class="btn" href="../bci/">BCI-Test</a>
@@ -24,11 +23,31 @@
     </section>
 
     <section class="card">
-      <h2>Status</h2>
-      <p>
-        This is a placeholder page. Next: build the form → generate zip → run validator.
-      </p>
+      <h2>Inputs (minimal)</h2>
+      <div class="grid2">
+        <div class="row"><div class="label">Business name</div><input id="business_name" placeholder="(optional)" /></div>
+        <div class="row"><div class="label">Objective</div><input id="objective" placeholder="e.g., 10 calls booked in 30 days" /></div>
+        <div class="row"><div class="label">Target customer</div><input id="target_customer" placeholder="ICP in 1 sentence" /></div>
+        <div class="row"><div class="label">Offer</div><input id="offer" placeholder="1-line offer" /></div>
+        <div class="row"><div class="label">Primary channel</div><input id="primary_channel" placeholder="e.g., cold email" /></div>
+        <div class="row"><div class="label">Budget cap (USD)</div><input id="budget_cap_usd" type="number" min="0" step="1" placeholder="0" /></div>
+      </div>
     </section>
+
+    <section class="card buy">
+      <h2>Downloads</h2>
+      <ul>
+        <li><a href="../downloads/operator-pack-template.zip">operator-pack-template.zip</a> + <a href="../downloads/operator-pack-template.zip.sha256">sha256</a></li>
+        <li><a href="../downloads/validator.zip">validator.zip</a> + <a href="../downloads/validator.zip.sha256">sha256</a></li>
+      </ul>
+      <div class="cta-row">
+        <button class="btn primary" id="download_manifest" type="button">Download operator_pack_manifest.json</button>
+      </div>
+      <pre id="preview" class="preview small"></pre>
+      <p class="small">Then fill the template while completing <code>/training/</code>. Validate locally via the included script.</p>
+    </section>
+
+    <script src="./app.js"></script>
   </main>
 </body>
 </html>
