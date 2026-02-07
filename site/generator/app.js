@@ -5,6 +5,11 @@
 
 const $ = (id) => document.getElementById(id);
 
+function getParam(name) {
+  const u = new URL(window.location.href);
+  return u.searchParams.get(name);
+}
+
 function buildManifest() {
   const obj = {
     kind: 'operator_pack_manifest',
@@ -55,6 +60,18 @@ function updatePreview() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Prefill from query params (BCI → Generator flow)
+  const prefill = {
+    objective: getParam('objective') || '',
+    target_customer: getParam('target_customer') || '',
+    offer: getParam('offer') || '',
+    primary_channel: getParam('primary_channel') || '',
+  };
+  for (const [k,v] of Object.entries(prefill)) {
+    const el = document.getElementById(k);
+    if (el && v) el.value = v;
+  }
+
   ['business_name','objective','target_customer','offer','primary_channel','budget_cap_usd'].forEach(id => {
     $(id).addEventListener('input', updatePreview);
   });
