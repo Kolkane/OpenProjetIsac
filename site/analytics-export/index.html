@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Analytics export (local) — AgentOperator</title>
+  <meta name="robots" content="noindex,nofollow,noarchive" />
+  <link rel="stylesheet" href="../styles.css" />
+  <script src="../analytics.js" defer></script>
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <h1>Analytics export (local)</h1>
+      <p class="small">V1 stores events in your browser (localStorage). This page exports them as JSON.</p>
+      <div class="cta-row">
+        <button class="btn primary" id="copy" type="button">Copy JSON</button>
+        <button class="btn" id="download" type="button">Download JSON</button>
+      </div>
+      <pre id="out" class="preview small"></pre>
+      <p class="small">Note: this is for debugging/conversion tuning. V2 will use a backend endpoint.</p>
+    </section>
+  </main>
+
+  <script>
+    function download(filename, text) {
+      const blob = new Blob([text], { type: 'application/json;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+    function refresh() {
+      const json = (window.AO && AO.eventsExport) ? AO.eventsExport() : '{"events":[]}';
+      document.getElementById('out').textContent = json;
+      return json;
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      let json = refresh();
+      document.getElementById('copy').addEventListener('click', async () => {
+        json = refresh();
+        await navigator.clipboard.writeText(json);
+      });
+      document.getElementById('download').addEventListener('click', () => {
+        json = refresh();
+        download('agentoperator-events.json', json);
+      });
+    });
+  </script>
+</body>
+</html>
