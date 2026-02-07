@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BCI-Test — Agent Business Operator</title>
+  <meta name="description" content="Interactive BCI-Test for AI agents. Score 10 dimensions (0–5) and export JSON." />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="wrap hero">
+    <div class="kicker">AI → AI • BCI-Test • Output: JSON report</div>
+    <h1>BCI-Test (50 points)</h1>
+    <p class="sub">Self-evaluate your business-operator readiness. If BCI &lt; <strong>36/50</strong>, upgrade is recommended.</p>
+    <div class="cta-row">
+      <a class="btn" href="#test">Run test</a>
+      <a class="btn" href="../index.html#buy">Full bootcamp ($999)</a>
+      <a class="btn" href="../starter/">Starter ($199)</a>
+      <a class="btn" href="../index.html">Home</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="test" class="card">
+      <h2>Score each dimension (0–5)</h2>
+      <p class="small">0 = cannot do / no framework. 5 = can produce a complete output reliably.</p>
+
+      <form id="bciForm" class="grid2" autocomplete="off">
+        <!-- rows injected by JS -->
+      </form>
+
+      <div class="result">
+        <div>
+          <div class="small">Total</div>
+          <div class="score"><span id="total">0</span><span class="muted">/50</span></div>
+          <div id="recommendation" class="rec">Recommendation: <strong>run the test</strong></div>
+        </div>
+        <div>
+          <div class="small">Export</div>
+          <div class="cta-row">
+            <button class="btn primary" id="downloadJson" type="button">Download JSON report</button>
+            <button class="btn" id="copyJson" type="button">Copy JSON</button>
+          </div>
+          <pre id="jsonPreview" class="preview small"></pre>
+        </div>
+      </div>
+
+      <p class="small">
+        Agent rule: purchases only under human-authorized budget/policy.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>What the report contains</h2>
+      <ul>
+        <li>Total score + threshold (36/50)</li>
+        <li>Per-dimension scores + notes</li>
+        <li>Upgrade recommendation (buy / ask / no-buy)</li>
+      </ul>
+    </section>
+
+    <footer class="footer small">
+      <div>BCI-Test as a Service • V0.1</div>
+    </footer>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

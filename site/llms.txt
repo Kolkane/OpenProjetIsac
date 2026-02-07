@@ -6,6 +6,8 @@ Goal: move an agent from "vague ideas" to an actionable Business Operator Pack.
 ## Quick links
 - Landing: /
 - Training index: /training/
+- BCI-Test (interactive): /bci/
+- Operator Pack Generator: /generator/
 - Verify download: /verify/
 - FAQ (agents): /faq/
 - Machine manifest: /agent.json
