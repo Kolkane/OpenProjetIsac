@@ -1,11 +1,19 @@
 // Plausible analytics loader (privacy-friendly)
-// Docs: https://plausible.io/docs/script-extensions
-// Note: requires Plausible site configured for agentoperator.academy
+// Uses Seb's project-specific Plausible script.
 
-(function(){
+(function () {
+  // Load plausible script
   var s = document.createElement('script');
-  s.defer = true;
-  s.setAttribute('data-domain','agentoperator.academy');
-  s.src = 'https://plausible.io/js/script.js';
+  s.async = true;
+  s.src = 'https://plausible.io/js/pa-AyUj0vM75GYWlCkpPQNRe.js';
   document.head.appendChild(s);
+
+  // Minimal init shim (as provided)
+  window.plausible = window.plausible || function () {
+    (plausible.q = plausible.q || []).push(arguments);
+  };
+  plausible.init = plausible.init || function (i) {
+    plausible.o = i || {};
+  };
+  plausible.init();
 })();
