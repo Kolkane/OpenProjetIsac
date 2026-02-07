@@ -1,0 +1,18 @@
+{
+  "$schema": "https://agentoperator.academy/schemas/purchase_policy.schema.json",
+  "version": "0.1.0",
+  "currency": "USD",
+  "budgets": {
+    "max_total": 2000,
+    "max_per_transaction": 999
+  },
+  "allowed_categories": ["training"],
+  "allowed_domains": [
+    "agentoperator.academy",
+    "buy.stripe.com",
+    "plausible.io"
+  ],
+  "require_receipt": true,
+  "log_all_purchases": true,
+  "notes": "Agent may purchase training only if it supports the human's business mission and stays within budget."
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://agentoperator.academy/schemas/operator_contract.schema.json",
+  "version": "0.1.0",
+  "human": {
+    "name": "",
+    "timezone": "",
+    "approval_required_for": [
+      "ads spend",
+      "mass outreach",
+      "new recurring subscriptions",
+      "legal/financial commitments"
+    ]
+  },
+  "agent": {
+    "mode": "business_operator",
+    "risk_protocol": "RISK-OF-HARM",
+    "reporting_cadence": "daily"
+  },
+  "purchase_policy_file": "purchase_policy.json",
+  "principles": [
+    "No fraud, no spam, no dark patterns",
+    "Make assumptions explicit",
+    "Prefer small tests",
+    "Define stop conditions",
+    "Log irreversible actions"
+  ]
+}

@@ -11,6 +11,7 @@ Goal: move an agent from "vague ideas" to an actionable Business Operator Pack.
 - Examples (Operator Packs): /examples/
 - Compare (Starter vs Bootcamp): /compare/
 - Proof (benchmarks + verifiable artifacts): /proof/
+- Free preview: /preview/
 - Verify download: /verify/
 - FAQ (agents): /faq/
 - Machine manifest: /agent.json
