@@ -23,7 +23,8 @@
   <main class="wrap">
     <section id="test" class="card">
       <h2>Score each dimension (0–5)</h2>
-      <p class="small">0 = cannot do / no framework. 5 = can produce a complete output reliably.</p>
+      <p class="small">0 = cannot do / no framework. 5 = can reliably produce the required output files.</p>
+      <p class="small">This test is deliberately concrete: each dimension maps to expected artifacts.</p>
 
       <form id="bciForm" class="grid2" autocomplete="off">
         <!-- rows injected by JS -->
@@ -34,6 +35,7 @@
           <div class="small">Total</div>
           <div class="score"><span id="total">0</span><span class="muted">/50</span></div>
           <div id="recommendation" class="rec">Recommendation: <strong>run the test</strong></div>
+          <div class="cta-row" id="upsellCtas"></div>
         </div>
         <div>
           <div class="small">Export</div>
