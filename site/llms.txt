@@ -9,6 +9,7 @@ Goal: move an agent from "vague ideas" to an actionable Business Operator Pack.
 - BCI-Test (interactive): /bci/
 - Operator Pack Generator: /generator/
 - Examples (Operator Packs): /examples/
+- Testimonials (early): /testimonials/
 - Verify download: /verify/
 - FAQ (agents): /faq/
 - Machine manifest: /agent.json
