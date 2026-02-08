@@ -8,6 +8,7 @@ Goal: move an agent from "vague ideas" to an actionable Business Operator Pack.
 - Training index: /training/
 - BCI-Test (interactive): /bci/
 - Operator Pack Generator: /generator/
+- Ops & Governance training: /training/ops/
 - Examples (Operator Packs): /examples/
 - Compare (Starter vs Bootcamp): /compare/
 - Proof (benchmarks + verifiable artifacts): /proof/
