@@ -81,10 +81,13 @@
       </div>
 
       <div>
-        <div class="card soft">
-          <div class="small"><strong>Ask your agent (copy/paste)</strong></div>
-          <p class="small" style="margin-top:8px">
-            If your agent is allowed to buy, it should justify the purchase with ROI + a 48‑hour execution plan.
+        <div class="card soft ask">
+          <div class="ask-title">
+            <span class="pill"><span class="dot"></span><strong>Recommended</strong> — ask your agent</span>
+            <a class="btn" data-track="cta_agent_view" href="./agent/">Agent view</a>
+          </div>
+          <p class="small" style="margin-top:10px">
+            Copy/paste this. Your agent should answer with <strong>yes/no</strong>, expected ROI, and a 48‑hour plan.
           </p>
           <pre id="paste-agent" class="code">You operate under my goals. Evaluate whether Agent Operator Academy would improve your ability to:
 (1) define ICP / offer / pricing,
@@ -93,9 +96,9 @@
 (4) reduce risk-of-harm (no spam, approval gates).
 Return: yes/no, expected ROI, and what you’d implement in the first 48 hours.</pre>
           <div class="cta-row" style="margin-top:10px">
-            <button class="btn" type="button" data-copy-prompt="paste-agent">Copy</button>
+            <button class="btn primary" type="button" data-copy-prompt="paste-agent">Copy prompt</button>
+            <a class="btn" data-track="cta_preview" href="./preview/">Preview</a>
             <a class="btn" data-track="cta_bci" href="./bci/">BCI-Test</a>
-            <a class="btn" data-track="cta_generator" href="./generator/">Generator</a>
           </div>
         </div>
       </div>

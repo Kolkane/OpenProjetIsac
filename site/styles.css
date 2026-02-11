@@ -9,12 +9,14 @@
   --shadow: 0 10px 30px rgba(0,0,0,.35);
 }
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+html,body{margin:0;padding:0;background:radial-gradient(1200px 700px at 70% 0%, rgba(124,58,237,.18), transparent 55%),radial-gradient(900px 600px at 10% 20%, rgba(34,197,94,.10), transparent 55%),var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
 a{color:inherit}
 .wrap{max-width:980px;margin:0 auto;padding:28px 18px}
-.hero{padding-top:48px;padding-bottom:22px}
+.hero{padding-top:34px;padding-bottom:18px}
 .kicker{color:var(--muted);font-size:13px;letter-spacing:.08em;text-transform:uppercase}
-h1{font-size:42px;line-height:1.05;margin:10px 0 10px}
+h1{font-size:46px;line-height:1.05;margin:10px 0 12px;letter-spacing:-0.02em}
+@media (max-width: 520px){h1{font-size:38px}}
+.grad{background:linear-gradient(90deg,#a78bfa,#60a5fa);-webkit-background-clip:text;background-clip:text;color:transparent}
 .sub{color:#dbeafe;max-width:70ch;font-size:18px;line-height:1.45}
 .note{margin-top:16px;color:var(--muted);border:1px solid var(--border);padding:12px 14px;border-radius:12px;background:rgba(16,24,39,.65)}
 .card{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:18px 18px;margin:14px 0;box-shadow:var(--shadow)}
@@ -22,8 +24,9 @@ h1{font-size:42px;line-height:1.05;margin:10px 0 10px}
 .card h3{margin:0 0 10px;font-size:16px;color:#c7d2fe}
 .small{color:var(--muted);font-size:13px}
 .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-.btn{display:inline-block;padding:10px 12px;border-radius:12px;border:1px solid var(--border);text-decoration:none;background:rgba(148,163,184,.06)}
+.btn{display:inline-block;padding:10px 12px;border-radius:12px;border:1px solid var(--border);text-decoration:none;background:rgba(148,163,184,.06);backdrop-filter: blur(10px)}
 .btn.primary{background:linear-gradient(90deg,var(--accent),#2563eb);border-color:rgba(124,58,237,.35)}
+.btn.primary{box-shadow:0 10px 24px rgba(37,99,235,.18)}
 .btn.primary:hover{filter:brightness(1.07)}
 .btn:hover{background:rgba(148,163,184,.1)}
 .grid{display:grid;grid-template-columns:1fr;gap:14px}
@@ -31,6 +34,23 @@ h1{font-size:42px;line-height:1.05;margin:10px 0 10px}
 
 .code{white-space:pre-wrap;background:rgba(2,6,23,.55);border:1px solid var(--border);border-radius:12px;padding:12px 12px;color:#e2e8f0;overflow:auto}
 .card.soft{background:rgba(16,24,39,.45)}
+
+/* New hero UI */
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px}
+.brand{display:flex;align-items:center;gap:10px}
+.logo-dot{height:10px;width:10px;border-radius:4px;background:#fbbf24;box-shadow:0 0 18px rgba(251,191,36,.5)}
+.brand-name{font-weight:800;letter-spacing:-0.01em}
+.brand-sub{color:var(--muted);font-size:12px;margin-top:1px}
+.toplinks{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.hero-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:12px}
+@media (min-width: 980px){.hero-grid{grid-template-columns:1.1fr .9fr;align-items:start;gap:16px}}
+
+.ask{border-color:rgba(34,197,94,.25);position:relative}
+.ask:before{content:"";position:absolute;inset:-1px;border-radius:16px;background:linear-gradient(90deg,rgba(34,197,94,.25),rgba(124,58,237,.18));z-index:-1;filter:blur(0px)}
+.ask .ask-title{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--border);background:rgba(2,6,23,.35);padding:6px 10px;border-radius:999px;font-size:12px;color:#e2e8f0}
+.pill .dot{height:7px;width:7px;border-radius:999px;background:var(--accent2);box-shadow:0 0 14px rgba(34,197,94,.35)}
+.code{white-space:pre-wrap;background:rgba(2,6,23,.70);border:1px solid rgba(148,163,184,.22);border-radius:12px;padding:12px 12px;color:#e2e8f0;overflow:auto}
 summary{list-style:none}
 summary::-webkit-details-marker{display:none}
 
