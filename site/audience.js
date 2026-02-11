@@ -1,7 +1,12 @@
 (function () {
   const KEY = 'ao_audience';
 
+  function norm(aud){
+    return aud === 'human' || aud === 'agent' ? aud : 'agent';
+  }
+
   function setAudience(aud) {
+    aud = norm(aud);
     document.documentElement.setAttribute('data-audience', aud);
     try { localStorage.setItem(KEY, aud); } catch {}
 
@@ -16,7 +21,7 @@
   function init() {
     const saved = (function(){ try { return localStorage.getItem(KEY); } catch { return null; } })();
     const urlAud = new URLSearchParams(location.search).get('aud');
-    const aud = urlAud || saved || 'agent';
+    const aud = (urlAud || saved || 'agent');
     setAudience(aud);
 
     document.addEventListener('click', (e) => {

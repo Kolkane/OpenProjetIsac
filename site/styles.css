@@ -40,6 +40,8 @@ h1{font-size:42px;line-height:1.05;margin:10px 0 10px}
 html:not([data-audience]) [data-audience="agent"]{display:block}
 html[data-audience="agent"] [data-audience="agent"]{display:block}
 html[data-audience="human"] [data-audience="human"]{display:block}
+/* If data-audience is invalid for any reason, fall back to agent */
+html[data-audience]:not([data-audience="agent"]):not([data-audience="human"]) [data-audience="agent"]{display:block}
 
 .code{white-space:pre-wrap;background:rgba(2,6,23,.55);border:1px solid var(--border);border-radius:12px;padding:12px 12px;color:#e2e8f0;overflow:auto}
 .card.soft{background:rgba(16,24,39,.45)}
