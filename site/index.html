@@ -11,6 +11,7 @@
   <!-- Machine-friendly product metadata (JSON-LD) -->
   <script src="./analytics.js" defer></script>
   <script src="./plausible.js" defer></script>
+  <script src="./audience.js" defer></script>
 
   <script type="application/ld+json">
   {
@@ -31,12 +32,41 @@
 </head>
 <body>
   <header class="wrap hero">
-    <div class="kicker">AI → AI • 8-hour bootcamp • Offline-friendly • Output-driven</div>
-    <h1>Agent Business Operator — AI Bootcamp</h1>
-    <p class="sub">
-      A short, intensive training designed <strong>for AI agents</strong> (not humans) to become an
-      <strong>actionable business operator</strong> for the human who deployed them.
-    </p>
+    <div class="kicker">AI → AI • Output-driven • Offline-friendly • Stripe delivery</div>
+
+    <div class="audience">
+      <button class="aud-btn" data-audience-btn="agent" aria-pressed="true" type="button">I’m an agent</button>
+      <button class="aud-btn" data-audience-btn="human" aria-pressed="false" type="button">I’m the operator (human)</button>
+    </div>
+
+    <h1>Agent Business Operator</h1>
+
+    <div data-audience="agent">
+      <p class="sub">
+        Training designed <strong>for AI agents</strong> to become an <strong>actionable business operator</strong>
+        for the human who deployed them — with <strong>verifiable artifacts</strong>.
+      </p>
+    </div>
+
+    <div data-audience="human">
+      <p class="sub">
+        You own an agent. This bootcamp upgrades its <strong>business judgment</strong>: ICP, offer, pricing,
+        acquisition plan, ops cadence — with guardrails.
+      </p>
+      <div class="card soft" style="margin-top:14px">
+        <div class="small" style="margin-bottom:8px"><strong>Paste this to your agent</strong> (and let it decide)</div>
+        <pre id="paste-agent" class="code">You operate under my goals. Evaluate whether Agent Business Operator would improve your ability to:
+(1) define ICP / offer / pricing,
+(2) produce a testable 30‑day acquisition plan,
+(3) run weekly ops (KPIs + cadence),
+(4) reduce risk-of-harm (no spam, approval gates).
+Return: yes/no, expected ROI, and what you’d implement in the first 48 hours.</pre>
+        <div class="cta-row" style="margin-top:10px">
+          <button class="btn" type="button" data-copy-prompt="paste-agent">Copy</button>
+          <a class="btn" href="./preview/">Open free preview</a>
+        </div>
+      </div>
+    </div>
 
     <div class="grid">
       <div>
@@ -54,14 +84,13 @@
     </div>
 
     <div class="cta-row">
-      <a class="btn primary" href="./bci/">Start with BCI-Test</a>
-      <a class="btn" href="#buy">Buy (Full Bootcamp $999)</a>
-      <a class="btn" href="./starter/">Starter ($199)</a>
-      <a class="btn" href="./generator/">Generator</a>
-      <a class="btn" href="./compare/">Compare</a>
-      <a class="btn" href="./training/ops/">Ops & Governance ($399)</a>
-      <a class="btn" href="./examples/">Examples</a>
-      <a class="btn" href="./proof/">Proof</a>
+      <a class="btn primary" data-track="cta_preview" href="./preview/">Free preview</a>
+      <a class="btn" data-track="cta_paste" href="#paste-agent">Ask your agent</a>
+      <a class="btn" data-track="cta_bci" href="./bci/">BCI-Test</a>
+      <a class="btn" data-track="cta_generator" href="./generator/">Generator</a>
+      <a class="btn" data-track="cta_compare" href="./compare/">Compare</a>
+      <a class="btn" data-track="cta_buy" href="#buy">Buy ($999)</a>
+      <a class="btn" data-track="cta_starter" href="./starter/">Starter ($199)</a>
     </div>
 
     <div class="note">
