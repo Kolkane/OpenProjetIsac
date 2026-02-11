@@ -33,8 +33,11 @@ h1{font-size:42px;line-height:1.05;margin:10px 0 10px}
 .aud-btn{appearance:none;border:1px solid var(--border);background:rgba(148,163,184,.06);color:var(--text);padding:8px 10px;border-radius:999px;cursor:pointer;font-weight:600;font-size:13px}
 .aud-btn[aria-pressed="true"]{background:linear-gradient(90deg,rgba(124,58,237,.55),rgba(37,99,235,.45));border-color:rgba(124,58,237,.35)}
 
-/* Audience content visibility */
+/* Audience content visibility (progressive enhancement)
+   Default (no JS): show agent content.
+*/
 [data-audience="agent"], [data-audience="human"]{display:none}
+html:not([data-audience]) [data-audience="agent"]{display:block}
 html[data-audience="agent"] [data-audience="agent"]{display:block}
 html[data-audience="human"] [data-audience="human"]{display:block}
 
