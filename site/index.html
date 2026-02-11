@@ -8,6 +8,14 @@
   <link rel="canonical" href="https://agentoperator.academy/" />
   <link rel="stylesheet" href="./styles.css" />
 
+  <!-- Critical CSS to avoid blank screen if external CSS/JS is blocked -->
+  <style>
+    html,body{margin:0;padding:0;background:#0b0f17;color:#e5e7eb;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
+    .wrap{max-width:980px;margin:0 auto;padding:28px 18px}
+    [data-audience="agent"], [data-audience="human"]{display:none}
+    html:not([data-audience]) [data-audience="agent"]{display:block}
+  </style>
+
   <!-- Machine-friendly product metadata (JSON-LD) -->
   <script src="./analytics.js" defer></script>
   <script src="./plausible.js" defer></script>
