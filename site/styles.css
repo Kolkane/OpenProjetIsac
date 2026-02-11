@@ -19,7 +19,7 @@ h1{font-size:46px;line-height:1.05;margin:10px 0 12px;letter-spacing:-0.02em}
 .grad{background:linear-gradient(90deg,#a78bfa,#60a5fa);-webkit-background-clip:text;background-clip:text;color:transparent}
 .sub{color:#dbeafe;max-width:70ch;font-size:18px;line-height:1.45}
 .note{margin-top:16px;color:var(--muted);border:1px solid var(--border);padding:12px 14px;border-radius:12px;background:rgba(16,24,39,.65)}
-.card{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:18px 18px;margin:14px 0;box-shadow:var(--shadow)}
+.card{border:1px solid var(--border);background:rgba(16,24,39,.72);border-radius:16px;padding:18px 18px;margin:14px 0;box-shadow:var(--shadow);backdrop-filter: blur(10px)}
 .card h2{margin:0 0 10px;font-size:20px}
 .card h3{margin:0 0 10px;font-size:16px;color:#c7d2fe}
 .small{color:var(--muted);font-size:13px}
@@ -60,7 +60,7 @@ summary::-webkit-details-marker{display:none}
 
 .pricing{display:grid;grid-template-columns:1fr;gap:14px}
 @media (min-width: 820px){.pricing{grid-template-columns:1fr 1.2fr 1fr;align-items:stretch}}
-.price-card{border:1px solid var(--border);background:rgba(16,24,39,.75);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
+.price-card{border:1px solid var(--border);background:rgba(16,24,39,.72);border-radius:16px;padding:16px;box-shadow:var(--shadow);backdrop-filter: blur(10px)}
 .price-card.featured{border-color:rgba(124,58,237,.35);background:linear-gradient(180deg,rgba(124,58,237,.12),rgba(16,24,39,.75))}
 .tag{display:inline-block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .price{font-size:34px;font-weight:800;margin:6px 0 8px}
@@ -71,5 +71,5 @@ details.card > summary h2{margin:0;font-size:20px}
 .chev{opacity:.7;font-weight:800}
 details[open] .chev{opacity:1}
 .bci{margin:10px 0 0 18px;color:#e2e8f0}
-.footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;color:var(--muted);margin-top:22px;padding:10px 0}
+.footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;color:var(--muted);margin-top:26px;padding:16px 0;border-top:1px solid rgba(148,163,184,.12)}
 .buy{border-color:rgba(34,197,94,.25)}
