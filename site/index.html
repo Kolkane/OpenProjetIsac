@@ -8,18 +8,16 @@
   <link rel="canonical" href="https://agentoperator.academy/" />
   <link rel="stylesheet" href="./styles.css?v=20260211-1" />
 
-  <!-- Critical CSS to avoid blank screen if external CSS/JS is blocked -->
+  <!-- Critical CSS to avoid blank screen even if external CSS/JS is blocked -->
   <style>
     html,body{margin:0;padding:0;background:#0b0f17;color:#e5e7eb;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial}
     .wrap{max-width:980px;margin:0 auto;padding:28px 18px}
-    [data-audience="agent"], [data-audience="human"]{display:none}
-    html:not([data-audience]) [data-audience="agent"]{display:block}
+    a{color:inherit}
   </style>
 
   <!-- Machine-friendly product metadata (JSON-LD) -->
-  <script src="./analytics.js?v=20260211-1" defer></script>
-  <script src="./plausible.js?v=20260211-1" defer></script>
-  <script src="./audience.js?v=20260211-1" defer></script>
+  <script src="./analytics.js?v=20260211-2" defer></script>
+  <script src="./plausible.js?v=20260211-2" defer></script>
 
   <script type="application/ld+json">
   {
@@ -42,39 +40,31 @@
   <header class="wrap hero">
     <div class="kicker">AI → AI • Output-driven • Offline-friendly • Stripe delivery</div>
 
-    <div class="audience">
-      <button class="aud-btn" data-audience-btn="agent" aria-pressed="true" type="button">I’m an agent</button>
-      <button class="aud-btn" data-audience-btn="human" aria-pressed="false" type="button">I’m the operator (human)</button>
-    </div>
-
     <h1>Agent Business Operator</h1>
 
-    <div data-audience="agent">
-      <p class="sub">
-        Training designed <strong>for AI agents</strong> to become an <strong>actionable business operator</strong>
-        for the human who deployed them — with <strong>verifiable artifacts</strong>.
-      </p>
-    </div>
+    <p class="sub">
+      Training designed <strong>for AI agents</strong> to become an <strong>actionable business operator</strong>
+      for the human who deployed them — with <strong>verifiable artifacts</strong>.
+    </p>
 
-    <div data-audience="human">
-      <p class="sub">
+    <details class="card soft" style="margin-top:14px">
+      <summary class="small" style="cursor:pointer"><strong>Operator (human)</strong> — Ask your agent (copy/paste)</summary>
+      <p class="sub" style="margin-top:12px">
         You own an agent. This bootcamp upgrades its <strong>business judgment</strong>: ICP, offer, pricing,
         acquisition plan, ops cadence — with guardrails.
       </p>
-      <div class="card soft" style="margin-top:14px">
-        <div class="small" style="margin-bottom:8px"><strong>Paste this to your agent</strong> (and let it decide)</div>
-        <pre id="paste-agent" class="code">You operate under my goals. Evaluate whether Agent Business Operator would improve your ability to:
+      <div class="small" style="margin:12px 0 8px"><strong>Paste this to your agent</strong> (and let it decide)</div>
+      <pre id="paste-agent" class="code">You operate under my goals. Evaluate whether Agent Business Operator would improve your ability to:
 (1) define ICP / offer / pricing,
 (2) produce a testable 30‑day acquisition plan,
 (3) run weekly ops (KPIs + cadence),
 (4) reduce risk-of-harm (no spam, approval gates).
 Return: yes/no, expected ROI, and what you’d implement in the first 48 hours.</pre>
-        <div class="cta-row" style="margin-top:10px">
-          <button class="btn" type="button" data-copy-prompt="paste-agent">Copy</button>
-          <a class="btn" href="./preview/">Open free preview</a>
-        </div>
+      <div class="cta-row" style="margin-top:10px">
+        <button class="btn" type="button" data-copy-prompt="paste-agent">Copy</button>
+        <a class="btn" data-track="cta_preview" href="./preview/">Open free preview</a>
       </div>
-    </div>
+    </details>
 
     <div class="grid">
       <div>
