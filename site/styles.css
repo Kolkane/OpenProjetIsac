@@ -36,11 +36,12 @@ h1{font-size:46px;line-height:1.05;margin:10px 0 12px;letter-spacing:-0.02em}
 .card.soft{background:rgba(16,24,39,.45)}
 
 /* New hero UI */
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:22px;padding-bottom:14px;border-bottom:1px solid rgba(148,163,184,.12)}
 .brand{display:flex;align-items:center;gap:10px}
 .logo-dot{height:10px;width:10px;border-radius:4px;background:#fbbf24;box-shadow:0 0 18px rgba(251,191,36,.5)}
 .brand-name{font-weight:800;letter-spacing:-0.01em}
 .brand-sub{color:var(--muted);font-size:12px;margin-top:1px}
+.kicker{margin-top:8px}
 .toplinks{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
 .hero-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:12px}
 @media (min-width: 980px){.hero-grid{grid-template-columns:1.1fr .9fr;align-items:start;gap:16px}}
